@@ -1,0 +1,146 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  color-scheme: light;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  min-height: 100vh;
+  background:
+    radial-gradient(circle at top left, rgba(217, 72, 15, 0.08), transparent 32%),
+    radial-gradient(circle at top right, rgba(15, 118, 110, 0.1), transparent 34%),
+    linear-gradient(180deg, #f6f7f3 0%, #eef2ed 100%);
+}
+
+* {
+  box-sizing: border-box;
+}
+
+button,
+input,
+select,
+textarea {
+  font: inherit;
+}
+
+input:not([type="checkbox"]),
+select,
+textarea {
+  width: 100%;
+  border-radius: 20px;
+  border: 1px solid rgba(255, 255, 255, 0.8);
+  background: rgba(255, 255, 255, 0.72);
+  color: #132a2a;
+  padding: 0.8rem 1rem;
+  outline: none;
+  transition: border-color 150ms ease, box-shadow 150ms ease, background 150ms ease;
+}
+
+input:focus,
+select:focus,
+textarea:focus {
+  border-color: rgba(15, 118, 110, 0.4);
+  box-shadow: 0 0 0 4px rgba(15, 118, 110, 0.12);
+  background: rgba(255, 255, 255, 0.92);
+}
+
+textarea {
+  min-height: 110px;
+  resize: vertical;
+}
+
+input[type="range"] {
+  padding: 0;
+  border: 0;
+  background: transparent;
+  box-shadow: none;
+}
+
+input[type="checkbox"] {
+  width: 1rem;
+}
+
+.demo-grid {
+  background-image:
+    linear-gradient(rgba(255, 255, 255, 0.32) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(255, 255, 255, 0.32) 1px, transparent 1px);
+  background-size: 18px 18px;
+}
+
+.demo-figure {
+  position: relative;
+  height: 78px;
+  width: 78px;
+}
+
+.demo-figure span {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  border-radius: 999px;
+  background: #132a2a;
+  transform-origin: center;
+}
+
+.demo-figure span:nth-child(1) {
+  height: 14px;
+  width: 14px;
+  margin-left: -7px;
+  margin-top: -34px;
+  animation: float-head 1.4s ease-in-out infinite;
+}
+
+.demo-figure span:nth-child(2) {
+  height: 40px;
+  width: 4px;
+  margin-left: -2px;
+  margin-top: -18px;
+}
+
+.demo-figure span:nth-child(3) {
+  height: 44px;
+  width: 44px;
+  margin-left: -22px;
+  margin-top: -2px;
+  border: 3px solid rgba(19, 42, 42, 0.9);
+  background: transparent;
+  border-left-color: transparent;
+  border-right-color: transparent;
+  animation: sweep 1.2s ease-in-out infinite;
+}
+
+.chart-line {
+  fill: none;
+  stroke: currentColor;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+  stroke-width: 3;
+}
+
+@keyframes float-head {
+  0%,
+  100% {
+    transform: translateY(0);
+  }
+
+  50% {
+    transform: translateY(-4px);
+  }
+}
+
+@keyframes sweep {
+  0%,
+  100% {
+    transform: rotate(-12deg);
+  }
+
+  50% {
+    transform: rotate(12deg);
+  }
+}

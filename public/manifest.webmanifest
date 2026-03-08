@@ -1,0 +1,11 @@
+{
+  "name": "Summon Fitness",
+  "short_name": "Summon",
+  "description": "A mobile-friendly pickleball training planner for home power, footwork, and technique.",
+  "start_url": ".",
+  "scope": ".",
+  "display": "standalone",
+  "background_color": "#f6f7f3",
+  "theme_color": "#132a2a",
+  "icons": []
+}
